@@ -1,0 +1,25 @@
+WEEK 4: Club Event + Registration Page
+Track: HTML Forms, Tables & Mini Project (PRACTICAL LAB 1)
+Concepts: form + label, input types, radio, checkbox, select, textarea, table, thead, tfoot, meta tags
+
+--------------------------------------------------------------------------------
+OBJECTIVE:
+--------------------------------------------------------------------------------
+Collect user input with a form and show data in a table.
+
+--------------------------------------------------------------------------------
+PROBLEM STATEMENT (FINAL QUESTION / PROJECT GOAL):
+--------------------------------------------------------------------------------
+Make a Tech Club page. Show the events in a table. Then make a registration
+form where students can type their details.
+
+--------------------------------------------------------------------------------
+TASKS (COVERS 4.1 TO 4.5):
+--------------------------------------------------------------------------------
+4.1 Add a form with name, email and password. Use label for each box.
+4.2 Add date, phone, radio buttons, checkboxes, a dropdown (select), a message box (textarea) and a submit button.
+4.3 Make an events table with a heading row, body rows and a footer row.
+4.4 Add meta tags and a favicon in the head.
+4.5 Real project has 4 pages (Home, About, Register, Contact). Copy this page 4 times and link them with the same menu.
+
+================================================================================

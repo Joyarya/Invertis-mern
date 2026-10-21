@@ -1,0 +1,25 @@
+WEEK 3: My Portfolio Page
+Track: Links, Images, Lists & Semantic HTML
+Concepts: a + target, img + alt, ul / ol / nested, header, nav, main, article, aside, footer
+
+--------------------------------------------------------------------------------
+OBJECTIVE:
+--------------------------------------------------------------------------------
+Link pages together and structure content with semantic tags.
+
+--------------------------------------------------------------------------------
+PROBLEM STATEMENT (FINAL QUESTION / PROJECT GOAL):
+--------------------------------------------------------------------------------
+Make a portfolio page with a menu, a picture, lists and a blog post. Use the
+special page-layout tags like header, main and footer.
+
+--------------------------------------------------------------------------------
+TASKS (COVERS 3.1 TO 3.5):
+--------------------------------------------------------------------------------
+3.1 Add a menu (nav) with links. One link should open in a new tab. Later: make a second page about.html and link it too.
+3.2 Add a picture with the img tag. Always write alt text.
+3.3 Make a list of your course. Put one list inside another list.
+3.4 Use header, nav, main, section, article, aside and footer tags.
+3.5 Add a small blog post. Check your folder, then submit.
+
+================================================================================

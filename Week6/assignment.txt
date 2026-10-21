@@ -1,0 +1,25 @@
+WEEK 6: Profile Card
+Track: Box Model, Display & Positioning (PRACTICAL LAB 2)
+Concepts: box-sizing, padding, border, margin, border-radius, overflow, sticky vs fixed, z-index
+
+--------------------------------------------------------------------------------
+OBJECTIVE:
+--------------------------------------------------------------------------------
+Understand the box model and position elements on screen.
+
+--------------------------------------------------------------------------------
+PROBLEM STATEMENT (FINAL QUESTION / PROJECT GOAL):
+--------------------------------------------------------------------------------
+Make a profile card with a round photo circle and a scrolling bio box. Add a top
+bar that stays on screen and a round + button that floats at the bottom.
+
+--------------------------------------------------------------------------------
+TASKS (COVERS 6.1 TO 6.5):
+--------------------------------------------------------------------------------
+6.1 Use box-sizing: border-box. Play with padding, border and margin. Take a DevTools screenshot and label the box model.
+6.2 Make the card with a border, round corners and a circle avatar. Then copy it to make 2 colour versions.
+6.3 Give the bio box a fixed height and overflow: auto so it scrolls.
+6.4 Make the top bar sticky and the + button fixed. Use z-index.
+6.5 Clean up your class names, test it, and submit.
+
+================================================================================

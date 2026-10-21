@@ -1,0 +1,25 @@
+WEEK 2: My Resume Page
+Track: HTML Foundations
+Concepts: DOCTYPE, head / body, h1-h6, p, strong, em, div, id, class, comments
+
+--------------------------------------------------------------------------------
+OBJECTIVE:
+--------------------------------------------------------------------------------
+Write a valid HTML5 page using headings, text tags and div blocks.
+
+--------------------------------------------------------------------------------
+PROBLEM STATEMENT (FINAL QUESTION / PROJECT GOAL):
+--------------------------------------------------------------------------------
+Make a resume page about yourself. Use only headings, paragraphs and text styles.
+No colours yet, plain HTML is fine!
+
+--------------------------------------------------------------------------------
+TASKS (COVERS 2.1 TO 2.5):
+--------------------------------------------------------------------------------
+2.1 Start with the basic page: DOCTYPE, head, title and h1 to h3 headings.
+2.2 Write an intro paragraph. Make some words bold (strong) and italic (em). Add a line (hr).
+2.3 Put Skills and Education inside div boxes. Give each an id and a class.
+2.4 Bonus: your teacher gives a broken HTML file. Find and fix all mistakes.
+2.5 Check your spacing (indent) and add comments. Submit the file.
+
+================================================================================
