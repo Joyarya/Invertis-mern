@@ -13,12 +13,56 @@
         label[for="message"] {
         vertical-align: top;
     }
+    table {
+            border-collapse: collapse;
+            width: 600px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
     </style>
 </head>
 
 <body>
     <h1>College Tech Club</h1>
     <h2>Event Registration</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Venue</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Hackathon</td>
+                <td>10 November</td>
+                <td>Computer Lab</td>
+            </tr>
+            <tr>
+                <td>Web Development Workshop</td>
+                <td>15 November</td>
+                <td>Seminar Hall</td>
+            </tr>
+            <tr>
+                <td>Tech Quiz</td>
+                <td>20 November</td>
+                <td>Room 101</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Events: 3</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
     <form action="">
         <label for="Name">Full Name</label>
         <input type="text" name="name" id="name" required>
