@@ -206,3 +206,32 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: var(--color-accent);
 }
+button[type="submit"]:hover {
+  background-color: var(--color-accent);
+}
+
+/* ===== Small screens ===== */
+@media (max-width: 600px) {
+  :root {
+    --space-md: 16px;
+    --space-xl: 36px;
+  }
+
+  #hero h2 {
+    font-size: 1.75rem;
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  input[type="radio"] + label,
+  input[type="checkbox"] + label {
+    display: inline-block;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+}
