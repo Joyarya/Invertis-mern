@@ -7,68 +7,75 @@
     <meta name="author" content="Vaibhav Gangwar">
     <title>Register - Tech Club</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <style>
-        label { display: inline-block; width: 100px; }
-        label[for="message"] { vertical-align: top; }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Event Registration</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="register.html">Register</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <header>
+        <h1>Event Registration</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="register.html">Register</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-    <form>
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br><br>
+    <main>
+        <section class="card">
+            <h2>Register for an Event</h2>
+            <form>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br><br>
 
-        <label for="date">Event Date:</label>
-        <input type="date" id="date" name="date">
-        <br><br>
+                <label for="date">Event Date:</label>
+                <input type="date" id="date" name="date">
+                <br><br>
 
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone">
-        <br><br>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+                <br><br>
 
-        <p>Choose your year:</p>
-        <input type="radio" id="first" name="year" value="First Year">
-        <label for="first">First Year</label>
-        <input type="radio" id="second" name="year" value="Second Year">
-        <label for="second">Second Year</label>
-        <br><br>
+                <p>Choose your year:</p>
+                <input type="radio" id="first" name="year" value="First Year">
+                <label for="first">First Year</label>
+                <input type="radio" id="second" name="year" value="Second Year">
+                <label for="second">Second Year</label>
+                <br><br>
 
-        <p>Choose your interests:</p>
-        <input type="checkbox" id="coding" name="interest" value="Coding">
-        <label for="coding">Coding</label>
-        <input type="checkbox" id="design" name="interest" value="Design">
-        <label for="design">Design</label>
-        <br><br>
+                <p>Choose your interests:</p>
+                <input type="checkbox" id="coding" name="interest" value="Coding">
+                <label for="coding">Coding</label>
+                <input type="checkbox" id="design" name="interest" value="Design">
+                <label for="design">Design</label>
+                <br><br>
 
-        <label for="event">Select Event:</label>
-        <select id="event" name="event">
-            <option value="Hackathon">Hackathon</option>
-            <option value="Web Development">Web Development</option>
-            <option value="Quiz">Tech Quiz</option>
-        </select>
-        <br><br>
+                <label for="event">Select Event:</label>
+                <select id="event" name="event">
+                    <option value="Hackathon">Hackathon</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Quiz">Tech Quiz</option>
+                </select>
+                <br><br>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" cols="30"></textarea>
-        <br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" cols="30"></textarea>
+                <br><br>
 
-        <button type="submit">Register</button>
-    </form>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
