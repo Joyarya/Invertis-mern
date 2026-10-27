@@ -7,9 +7,51 @@
     <title>Tech Club</title>
     <style>
     body {
+        <style>
+    /* Universal selector */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
         font-family: Arial, sans-serif;
         background-color: #F4F1EA;
         color: #1F2A33;
+    }
+
+    /* Element selector */
+    h1 {
+        color: #F4F1EA;
+    }
+
+    /* Class selector */
+    .card {
+        background-color: #FBF9F4;
+        border: 1px solid #DAD4C7;
+        border-radius: 8px;
+        padding: 24px;
+        margin: 24px auto;
+        max-width: 860px;
+    }
+
+    /* ID selector */
+    #hero {
+        background-color: #24454A;
+        color: #F4F1EA;
+        padding: 56px 24px;
+    }
+
+    header {
+        background-color: #24454A;
+        padding: 20px 24px;
+    }
+
+    nav a {
+        color: #F4F1EA;
+        margin-right: 16px;
+        text-decoration: none;
     }
 
     label {
@@ -21,112 +63,45 @@
     }
     table {
         border-collapse: collapse;
-        width: 600px;
+        width: 100%;
     }
-    th,
-    td {
-        border: 1px solid black;
+    th, td {
+        border: 1px solid #DAD4C7;
         padding: 8px;
         text-align: left;
     }
 </style>
+</style>
 </head>
 
 <body>
-    <h1>College Tech Club
+    <header>
+        <h1>College Tech Club</h1>
         <nav>
-            <nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="register.html">Register</a> |
-    <a href="contact.html">Contact</a>
-</nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="register.html">Register</a>
+            <a href="contact.html">Contact</a>
         </nav>
-    </h1>
-    <h2>Event Registration</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Event Name</th>
-                <th>Date</th>
-                <th>Venue</th>
-            </tr>
-        </thead>
+    </header>
 
-        <tbody>
-            <tr>
-                <td>Hackathon</td>
-                <td>10 November</td>
-                <td>Computer Lab</td>
-            </tr>
-            <tr>
-                <td>Web Development Workshop</td>
-                <td>15 November</td>
-                <td>Seminar Hall</td>
-            </tr>
-            <tr>
-                <td>Tech Quiz</td>
-                <td>20 November</td>
-                <td>Room 69</td>
-            </tr>
-        </tbody>
+    <main>
+        <section id="hero">
+            <h2>Build. Learn. Compete.</h2>
+            <p>Workshops, hackathons and quizzes for students who like technology.</p>
+            <a href="register.html" class="button">Register now</a>
+        </section>
 
-        <tfoot>
-            <tr>
-                <td colspan="3">Total Events: 3</td>
-            </tr>
-        </tfoot>
-    </table>
-    <br>
-    <form action="">
-        <label for="Name">Full Name</label>
-        <input type="text" name="name" id="name" required>
-        <br><br>
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email" required>
-        <br><br>
-        <label for="Password">Password</label>
-        <input type="password" name="password" id="password" required>
-        <br><br>
-        <label for="date">Date</label>
-        <input type="date" required>
-        <br><br>
-        <label for="Phone">Contact Number</label>
-        <input type="password" name="phone" id="phone" required>
-        <br><br>
-        <p>Choose your year:</p>
-        <input type="radio" id="first" name="year" value="First Year">
-        <label for="first">First Year</label>
+        <section class="card">
+            <h2>Upcoming Events</h2>
+            <!-- keep your existing <table> here -->
+        </section>
 
-        <input type="radio" id="second" name="year" value="Second Year">
-        <label for="second">Second Year</label>
-        <input type="radio" name="year" id="third">
-        <label for="third">Third Year</label>
-        <input type="radio" name="year" id="fourth">
-        <label for="fourth">Fourth Year</label>
-        <br><br>
-        <p>Choose your interest:</p>
-        <input type="checkbox" name="interest" id="coding">
-        <label for="coding">Coding</label>
-        <input type="checkbox" name="interest">
-        <label for="Gaming">Gaming</label>
-        <input type="checkbox" name="video" id="editing">
-        <label for="vid">Video Editing</label>
-        <input type="checkbox" name="Working" id="Out">
-        <label for="workout">Sports</label>
-        <br><br>
-        <Label for="event">Select Event</Label>
-        <select name="event" id="event">
-            <option value="Hackathon">Hackathon</option>
-            <option value="Web Development">Web Development</option>
-            <option value="quiz">Quiz</option>
-        </select>
-        <br><br> 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" cols="30" placeholder="Write a Message"></textarea>
-        <br><br>
-        <button type="submit">Register</button>
-    </form>
+        <section class="card">
+            <h2>Event Registration</h2>
+            <!-- keep your existing <form> here -->
+        </section>
+    </main>
 </body>
 
 </html>
