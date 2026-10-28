@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Club</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+</head>
+
+<body>
+    <header>
+        <h1>College Tech Club</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="register.html">Register</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Build. Learn. Compete.</h2>
+            <p>Workshops, hackathons and quizzes for students who like technology.</p>
+            <a href="register.html" class="button">Register now</a>
+        </section>
+
+        <section class="card">
+            <h2>Upcoming Events</h2>
+             <table>
+        <thead>
+            <tr>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Venue</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Hackathon</td>
+                <td>10 November</td>
+                <td>Computer Lab</td>
+            </tr>
+            <tr>
+                <td>Web Development Workshop</td>
+                <td>15 November</td>
+                <td>Seminar Hall</td>
+            </tr>
+            <tr>
+                <td>Tech Quiz</td>
+                <td>20 November</td>
+                <td>Room 69</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Events: 3</td>
+            </tr>
+        </tfoot>
+    </table>
+        </section>
+
+        <section class="card">
+            <h2>Event Registration</h2>
+           <form action="">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" required>
+        <br><br>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" required>
+        <br><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+        <br><br>
+        <label for="date">Date</label>
+        <input type="date" required>
+        <br><br>
+        <label for="Phone">Contact Number</label>
+        <input type="password" name="phone" id="phone" required>
+        <br><br>
+        <p>Choose your year:</p>
+        <input type="radio" id="first" name="year" value="First Year">
+        <label for="first">First Year</label>
+
+        <input type="radio" id="second" name="year" value="Second Year">
+        <label for="second">Second Year</label>
+        <input type="radio" name="year" id="third">
+        <label for="third">Third Year</label>
+        <input type="radio" name="year" id="fourth">
+        <label for="fourth">Fourth Year</label>
+        <br><br>
+        <p>Choose your interest:</p>
+        <input type="checkbox" name="interest" id="coding">
+        <label for="coding">Coding</label>
+        <input type="checkbox" name="interest">
+        <label for="Gaming">Gaming</label>
+        <input type="checkbox" name="video" id="editing">
+        <label for="vid">Video Editing</label>
+        <input type="checkbox" name="Working" id="Out">
+        <label for="workout">Sports</label>
+        <br><br>
+        <Label for="event">Select Event</Label>
+        <select name="event" id="event">
+            <option value="Hackathon">Hackathon</option>
+            <option value="Web Development">Web Development</option>
+            <option value="quiz">Quiz</option>
+        </select>
+        <br><br> 
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="30" placeholder="Write a Message"></textarea>
+        <br><br>
+        <button type="submit">Register</button>
+    </form>
+        </section>
+    </main>
+</body>
+
+</html>

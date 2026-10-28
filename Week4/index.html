@@ -5,36 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Club</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-</head>
+    <style>
+        label {
+            display: inline-block;
+            width: 110px;
+        }
+        label[for="message"] {
+        vertical-align: top;
+    }
+    table {
+            border-collapse: collapse;
+            width: 600px;
+        }
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <h1>College Tech Club</h1>
+    <h1>College Tech Club
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="register.html">Register</a>
-            <a href="contact.html">Contact</a>
+            <nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="register.html">Register</a> |
+    <a href="contact.html">Contact</a>
+</nav>
         </nav>
-    </header>
-
-    <main>
-        <section id="hero">
-            <h2>Build. Learn. Compete.</h2>
-            <p>Workshops, hackathons and quizzes for students who like technology.</p>
-            <a href="register.html" class="button">Register now</a>
-        </section>
-
-        <section class="card">
-            <h2>Upcoming Events</h2>
-             <table>
+    </h1>
+    <h2>Event Registration</h2>
+    <table>
         <thead>
             <tr>
                 <th>Event Name</th>
@@ -67,18 +71,15 @@
             </tr>
         </tfoot>
     </table>
-        </section>
-
-        <section class="card">
-            <h2>Event Registration</h2>
-           <form action="">
-        <label for="name">Full Name</label>
+    <br>
+    <form action="">
+        <label for="Name">Full Name</label>
         <input type="text" name="name" id="name" required>
         <br><br>
         <label for="email">Email</label>
         <input type="text" name="email" id="email" required>
         <br><br>
-        <label for="password">Password</label>
+        <label for="Password">Password</label>
         <input type="password" name="password" id="password" required>
         <br><br>
         <label for="date">Date</label>
@@ -120,8 +121,6 @@
         <br><br>
         <button type="submit">Register</button>
     </form>
-        </section>
-    </main>
 </body>
 
 </html>
