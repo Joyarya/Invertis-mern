@@ -214,3 +214,43 @@ html {
 .footer a {
   color: var(--color-accent-light);
 }
+/* ===== 7.5 Responsive tweaks ===== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+
+  .navbar__right {
+    gap: 20px;
+  }
+
+  .navbar__links {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;          /* logo on top, menu under it */
+    gap: 12px;
+  }
+
+  .navbar__right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+  }
+
+  .banner {
+    padding: 72px 20px;
+  }
+
+  .section {
+    padding: 48px 20px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
