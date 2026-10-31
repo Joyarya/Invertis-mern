@@ -1,0 +1,89 @@
+/* ===== Design tokens: change colours and sizes here only ===== */
+:root {
+  --color-bg: #F4F1EA;
+  --color-surface: #FBF9F4;
+  --color-text: #1F2A33;
+  --color-muted: #5B6670;
+  --color-primary: #24454A;
+  --color-on-primary: #F4F1EA;
+  --color-accent: #A35A17;
+  --color-accent-light: #E0A867;
+  --color-border: #DAD4C7;
+  --color-overlay: rgba(36, 69, 74, 0.78);
+
+  --font-main: 'IBM Plex Sans', Arial, sans-serif;
+  --radius: 8px;
+}
+
+/* ===== Base ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* ===== 7.1 Navbar (flexbox) ===== */
+.navbar {
+  display: flex;                     /* children sit in a row */
+  justify-content: space-between;    /* logo far left, menu far right */
+  align-items: center;               /* vertically centred */
+  padding: 16px 32px;
+  background-color: var(--color-primary);
+  border-bottom: 1px solid rgba(244, 241, 234, 0.15);
+}
+
+.navbar__logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-on-primary);
+  text-decoration: none;
+}
+
+.navbar__logo span {
+  color: var(--color-accent-light);
+}
+
+/* Links and button grouped on the right: a flex container inside a flex container */
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar__links a {
+  color: var(--color-on-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar__links a:hover {
+  color: var(--color-accent-light);
+}
+
+.navbar__button {
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  background-color: var(--color-accent);
+  color: var(--color-on-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar__button:hover {
+  background-color: var(--color-accent-light);
+  color: var(--color-primary);
+}
