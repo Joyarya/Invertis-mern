@@ -179,3 +179,38 @@ body {
   margin: 0;
   color: var(--color-muted);
 }
+/* ===== 7.4 Landing page assembly ===== */
+html {
+  scroll-behavior: smooth;           /* nav links glide to their section */
+}
+
+/* Navbar + banner together fill the first screen */
+.landing-top {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.banner {
+  flex: 1;                           /* banner takes all the height the navbar leaves */
+}
+
+/* ===== Footer ===== */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 24px 32px;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: var(--color-accent-light);
+}
