@@ -1,4 +1,4 @@
-/* ===== Design tokens ===== */
+
 :root {
   --color-bg: #F4F1EA;
   --color-surface: #FBF9F4;
@@ -8,13 +8,13 @@
   --color-on-primary: #F4F1EA;
   --color-accent: #A35A17;
   --color-accent-light: #E0A867;
-  --color-border: #DAD4C7;
 
   --font-main: 'IBM Plex Sans', Arial, sans-serif;
   --radius-card: 16px;
+  --radius-small: 8px;
 }
 
-/* ===== Box model ===== */
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -27,16 +27,43 @@ body {
   color: var(--color-text);
 }
 
-/* ===== Card ===== */
-/* Each colour version only changes these three variables */
-.card {
+main {
+  padding: 0 16px 96px;          
+}
+
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.top-bar h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.top-bar__name {
+  font-size: 0.9rem;
+  color: var(--color-accent-light);
+}
+
+
+.profile-card {
   --card-bg: var(--color-surface);
   --card-text: var(--color-text);
   --card-border: var(--color-primary);
   --card-muted: var(--color-muted);
   --bio-bg: rgba(31, 42, 51, 0.06);
 
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   padding: 24px;
   border: 4px solid var(--card-border);
   border-radius: var(--radius-card);
@@ -46,89 +73,64 @@ body {
   text-align: center;
 }
 
-/* Colour version 1 */
-.card-teal {
+.profile-card--teal {
   --card-bg: var(--color-primary);
   --card-text: var(--color-on-primary);
   --card-border: var(--color-accent-light);
   --card-muted: #C9D3CF;
-   --bio-bg: rgba(244, 241, 234, 0.12);
+  --bio-bg: rgba(244, 241, 234, 0.12);
 }
 
-/* Colour version 2 */
-.card-ochre {
+.profile-card--ochre {
   --card-bg: var(--color-accent);
   --card-text: var(--color-on-primary);
   --card-border: var(--color-primary);
   --card-muted: #F3E3CF;
-   --bio-bg: rgba(244, 241, 234, 0.12);
+  --bio-bg: rgba(244, 241, 234, 0.12);
 }
 
-/* ===== Avatar ===== */
-.pic {
+.profile-card__avatar {
   display: block;
   width: 120px;
   height: 120px;
   margin: 0 auto 16px;
   border: 4px solid var(--card-border);
-  border-radius: 50%;          /* 50% on a square = perfect circle */
-  object-fit: cover;           /* crops the photo instead of squashing it */
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.name {
+.profile-card__name {
   margin: 0;
   font-size: 1.35rem;
 }
 
-.role {
+.profile-card__role {
   margin: 0 0 16px;
   color: var(--card-muted);
 }
 
 
-.bio {
-  height: 120px;                
-  overflow: auto;                
+.profile-card__bio {
+  height: 120px;
+  overflow: auto;
   padding: 12px;
   border: 1px solid var(--card-border);
-  border-radius: 8px;
+  border-radius: var(--radius-small);
   background-color: var(--bio-bg);
   text-align: left;
   font-size: 0.95rem;
 }
 
-.bio p {
+.profile-card__bio p {
   margin: 0;
 }
-/* ===== Sticky top bar ===== */
-.bar {
-  position: sticky;              /* scrolls normally, then sticks at top: 0 */
-  top: 0;
-  z-index: 100;                  /* stays above the cards */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 24px;
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
-}
 
-.bar h1 {
-  margin: 0;
-  font-size: 1.25rem;
-}
 
-.bar-name {
-  font-size: 0.9rem;
-  color: var(--color-accent-light);
-}
-
-/* ===== Floating + button ===== */
-.plus-btn {
-  position: fixed;               /* fixed to the screen, ignores scrolling */
+.add-button {
+  position: fixed;
   right: 24px;
   bottom: 24px;
-  z-index: 200;                  /* above the bar and cards */
+  z-index: 200;
   width: 56px;
   height: 56px;
   border: none;
@@ -141,11 +143,11 @@ body {
   box-shadow: 0 4px 12px rgba(31, 42, 51, 0.3);
 }
 
-.plus-btn:hover {
+.add-button:hover {
   background-color: var(--color-primary);
 }
 
-/* keeps the last card from hiding behind the + button */
-main {
-  padding-bottom: 96px;
+.add-button:focus-visible {
+  outline: 3px solid var(--color-accent-light);
+  outline-offset: 2px;
 }

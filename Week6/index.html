@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profile card of Jwaydeep Sagar built with the CSS box model and positioning">
     <meta name="author" content="Jwaydeep Sagar">
     <title>Profile Card - Jwaydeep Sagar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,39 +12,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <header class="bar">
+    <header class="top-bar">
         <h1>Profile Card</h1>
-        <span class="bar-name">Jwaydeep Sagar</span>
+        <span class="top-bar__name">Jwaydeep Sagar</span>
     </header>
 
-        <main>
-        <article class="card">
-            <img class="pic" src="goku.png" alt="Photo of Jwaydeep Sagar">
-            <h2 class="name">Jwaydeep Sagar</h2>
-            <p class="role">Student | College Tech Club Member</p>
-            <div class="bio">
+    <main>
+        <!-- Version 1: light -->
+        <article class="profile-card">
+            <img class="profile-card__avatar" src="goku.png" alt="Photo of Jwaydeep Sagar">
+            <h2 class="profile-card__name">Jwaydeep Sagar</h2>
+            <p class="profile-card__role">Student | College Tech Club Member</p>
+            <div class="profile-card__bio">
                 <p>I am a college student and a member of the College Tech Club. I enjoy building small web projects with HTML and CSS, and I am learning how page layouts work. I like solving problems, trying new tools and helping friends debug their code. This semester I am focusing on the CSS box model, positioning and responsive design. Outside coding I enjoy music and sports. My goal is to build a portfolio website and take part in my first hackathon.</p>
             </div>
         </article>
 
-        <article class="card card-teal">
-            <img class="pic" src="goku.png" alt="Photo of Jwaydeep Sagar">
-            <h2 class="name">Jwaydeep Sagar</h2>
-            <p class="role">Student | College Tech Club Member</p>
-            <div class="bio">
+        <!-- Version 2: teal -->
+        <article class="profile-card profile-card--teal">
+            <img class="profile-card__avatar" src="goku.png" alt="Photo of Jwaydeep Sagar">
+            <h2 class="profile-card__name">Jwaydeep Sagar</h2>
+            <p class="profile-card__role">Student | College Tech Club Member</p>
+            <div class="profile-card__bio">
                 <p>I am a college student and a member of the College Tech Club. I enjoy building small web projects with HTML and CSS, and I am learning how page layouts work. I like solving problems, trying new tools and helping friends debug their code. This semester I am focusing on the CSS box model, positioning and responsive design. Outside coding I enjoy music and sports. My goal is to build a portfolio website and take part in my first hackathon.</p>
             </div>
         </article>
 
-        <article class="card card-ochre">
-            <img class="pic" src="goku.png" alt="Photo of Jwaydeep Sagar">
-            <h2 class="name">Jwaydeep Sagar</h2>
-            <p class="role">Student | College Tech Club Member</p>
-            <div class="bio">
+        <!-- Version 3: ochre -->
+        <article class="profile-card profile-card--ochre">
+            <img class="profile-card__avatar" src="goku.png" alt="Photo of Jwaydeep Sagar">
+            <h2 class="profile-card__name">Jwaydeep Sagar</h2>
+            <p class="profile-card__role">Student | College Tech Club Member</p>
+            <div class="profile-card__bio">
                 <p>I am a college student and a member of the College Tech Club. I enjoy building small web projects with HTML and CSS, and I am learning how page layouts work. I like solving problems, trying new tools and helping friends debug their code. This semester I am focusing on the CSS box model, positioning and responsive design. Outside coding I enjoy music and sports. My goal is to build a portfolio website and take part in my first hackathon.</p>
             </div>
         </article>
     </main>
-        <button class="plus-btn" type="button" aria-label="Add profile">+</button>
+
+    <button class="add-button" type="button" aria-label="Add profile">+</button>
 </body>
 </html>
