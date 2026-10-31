@@ -27,13 +27,6 @@ body {
   color: var(--color-text);
 }
 
-h1 {
-  margin: 32px 0 0;
-  text-align: center;
-  font-size: 1.5rem;
-  color: var(--color-primary);
-}
-
 /* ===== Card ===== */
 /* Each colour version only changes these three variables */
 .card {
@@ -106,4 +99,53 @@ h1 {
 
 .bio p {
   margin: 0;
+}
+/* ===== Sticky top bar ===== */
+.bar {
+  position: sticky;              /* scrolls normally, then sticks at top: 0 */
+  top: 0;
+  z-index: 100;                  /* stays above the cards */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.bar h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.bar-name {
+  font-size: 0.9rem;
+  color: var(--color-accent-light);
+}
+
+/* ===== Floating + button ===== */
+.plus-btn {
+  position: fixed;               /* fixed to the screen, ignores scrolling */
+  right: 24px;
+  bottom: 24px;
+  z-index: 200;                  /* above the bar and cards */
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-on-primary);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(31, 42, 51, 0.3);
+}
+
+.plus-btn:hover {
+  background-color: var(--color-primary);
+}
+
+/* keeps the last card from hiding behind the + button */
+main {
+  padding-bottom: 96px;
 }
