@@ -304,3 +304,18 @@ a {
     --section-space: 88px;
   }
 }
+/* ===== 9.4 Desktop layout (1024px and wider) ===== */
+@media (min-width: 1024px) {
+  .hero__inner {
+    grid-template-columns: 1fr 1fr;   /* text left, image right */
+    gap: 64px;
+  }
+
+  .hero__title {
+    font-size: 3rem;
+  }
+
+  .plan--featured {
+    transform: translateY(-8px);      /* the recommended plan sits slightly higher */
+  }
+}
