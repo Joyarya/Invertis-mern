@@ -26,7 +26,7 @@
 }
 
 html {
-  font-size: 100%;               /* 1rem = the browser's size, usually 16px */
+  font-size: 100%;
 }
 
 body {
@@ -38,7 +38,6 @@ body {
   color: var(--color-text);
 }
 
-/* 9.2 Images never grow wider than their container */
 img {
   display: block;
   max-width: 100%;
@@ -63,6 +62,7 @@ a {
   color: var(--color-on-primary);
   text-decoration: none;
   font-weight: 500;
+  text-align: center;
 }
 
 .button:hover {
@@ -79,15 +79,21 @@ a {
   background-color: var(--color-on-primary);
 }
 
-/* ===== Navbar ===== */
+/* ===== 9.3 Navbar: FLEXBOX ===== */
 .navbar {
   padding: 16px var(--page-pad);
   background-color: var(--color-primary);
 }
 
+.navbar__inner {
+  display: flex;
+  flex-wrap: wrap;                  /* lets the links drop to a second row on phones */
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px 16px;
+}
+
 .navbar__logo {
-  display: block;
-  margin-bottom: 8px;
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--color-on-primary);
@@ -98,15 +104,18 @@ a {
   color: var(--color-accent-light);
 }
 
-.navbar__links {
-  margin: 0 0 12px;
-  padding: 0;
-  list-style: none;
+.navbar__nav {
+  order: 3;                         /* moved after the button, so it wraps to its own row */
+  width: 100%;
 }
 
-.navbar__links li {
-  display: inline-block;
-  margin-right: 16px;
+.navbar__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .navbar__links a {
@@ -119,11 +128,18 @@ a {
   color: var(--color-accent-light);
 }
 
-/* ===== Hero ===== */
+/* ===== 9.3 Hero: GRID ===== */
 .hero {
   padding: var(--section-space) var(--page-pad);
   background-color: var(--color-primary);
   color: var(--color-on-primary);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr;       /* one column on phones: text, then image */
+  gap: 32px;
+  align-items: center;
 }
 
 .hero__title {
@@ -133,6 +149,7 @@ a {
 }
 
 .hero__lead {
+  max-width: 520px;
   margin: 0 0 24px;
   font-size: 1.125rem;
   color: var(--color-on-primary-muted);
@@ -140,9 +157,8 @@ a {
 
 .hero__image {
   width: 100%;
-  margin-top: 32px;
-  aspect-ratio: 16 / 9;          /* same shape on every screen */
-  object-fit: cover;             /* crop the photo instead of squashing it */
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   border-radius: var(--radius);
 }
 
@@ -164,9 +180,16 @@ a {
   color: var(--color-primary);
 }
 
+/* 9.3 Features and pricing: GRID */
+.features,
+.pricing {
+  display: grid;
+  grid-template-columns: 1fr;       /* one column on phones */
+  gap: 16px;
+}
+
 .feature,
 .plan {
-  margin-bottom: 16px;
   padding: 24px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
@@ -183,6 +206,12 @@ a {
 .feature__text {
   margin: 0;
   color: var(--color-muted);
+}
+
+/* Pricing card: flexbox inside the grid cell */
+.plan {
+  display: flex;
+  flex-direction: column;
 }
 
 .plan--featured {
@@ -203,6 +232,7 @@ a {
 }
 
 .plan__list {
+  flex: 1;                          /* takes the spare height, pushing the button down */
   margin: 0 0 20px;
   padding: 0;
   list-style: none;
@@ -220,8 +250,14 @@ a {
   color: var(--color-on-primary);
 }
 
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .footer p {
-  margin: 0 0 8px;
+  margin: 0;
 }
 
 .footer a {
@@ -235,8 +271,29 @@ a {
     --section-space: 64px;
   }
 
+  .navbar__inner {
+    column-gap: 28px;
+  }
+
+  .navbar__nav {
+    order: 0;                       /* back in normal order: logo, links, button in one row */
+    width: auto;
+    margin-left: auto;              /* pushes links and button to the right */
+  }
+
   .hero__title {
     font-size: 2.5rem;
+  }
+
+  .features,
+  .pricing {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -245,9 +302,5 @@ a {
   :root {
     --page-pad: 64px;
     --section-space: 88px;
-  }
-
-  .hero__title {
-    font-size: 3rem;
   }
 }
