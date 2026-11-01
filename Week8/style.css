@@ -187,3 +187,30 @@ body {
 .footer p {
   margin: 0;
 }
+/* ===== 8.4 Flexbox inside each grid box ===== */
+.stat {
+  display: flex;                 /* icon and text in a row */
+  align-items: center;           /* vertically centred */
+  gap: 14px;
+}
+
+.stat__icon {
+  display: flex;                 /* flex again, to centre the svg inside the circle */
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;                /* the circle never gets squashed */
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent);    /* the svg uses currentColor, so it picks this up */
+}
+
+.stat__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.stat__info {
+  min-width: 0;                  /* lets long text wrap instead of overflowing */
+}
