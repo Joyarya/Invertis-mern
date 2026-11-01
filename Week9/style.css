@@ -1,0 +1,239 @@
+/* ===== Design tokens: change colours and sizes here only ===== */
+:root {
+  --color-bg: #F4F1EA;
+  --color-surface: #FBF9F4;
+  --color-text: #1F2A33;
+  --color-muted: #5B6670;
+  --color-primary: #24454A;
+  --color-on-primary: #F4F1EA;
+  --color-on-primary-muted: #C9D3CF;
+  --color-accent: #A35A17;
+  --color-accent-light: #E0A867;
+  --color-border: #DAD4C7;
+
+  --font-main: 'IBM Plex Sans', Arial, sans-serif;
+  --radius: 12px;
+  --container-width: 1100px;
+
+  /* Phone values. Bigger screens change these in the media queries. */
+  --page-pad: 20px;
+  --section-space: 48px;
+}
+
+/* ===== Base (this is the PHONE layout) ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-accent);
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* ===== Buttons ===== */
+.button {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 8px;
+  background-color: var(--color-accent);
+  color: var(--color-on-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: var(--color-accent-light);
+  color: var(--color-primary);
+}
+
+.button--light {
+  background-color: var(--color-accent-light);
+  color: var(--color-primary);
+}
+
+.button--light:hover {
+  background-color: var(--color-on-primary);
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  padding: 16px var(--page-pad);
+  background-color: var(--color-primary);
+}
+
+.navbar__logo {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-on-primary);
+  text-decoration: none;
+}
+
+.navbar__logo span {
+  color: var(--color-accent-light);
+}
+
+.navbar__links {
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar__links li {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.navbar__links a {
+  color: var(--color-on-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar__links a:hover {
+  color: var(--color-accent-light);
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding: var(--section-space) var(--page-pad);
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.hero__title {
+  margin: 0 0 16px;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.hero__lead {
+  margin: 0 0 24px;
+  font-size: 18px;
+  color: var(--color-on-primary-muted);
+}
+
+.hero__image {
+  margin-top: 32px;
+  border-radius: var(--radius);
+}
+
+/* ===== Sections ===== */
+.section {
+  padding: var(--section-space) var(--page-pad);
+}
+
+.section--alt {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.section__title {
+  margin: 0 0 24px;
+  font-size: 26px;
+  line-height: 1.25;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.feature,
+.plan {
+  margin-bottom: 16px;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+}
+
+.feature__title,
+.plan__name {
+  margin: 0 0 8px;
+  font-size: 19px;
+  color: var(--color-primary);
+}
+
+.feature__text {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.plan--featured {
+  border: 2px solid var(--color-accent);
+}
+
+.plan__price {
+  margin: 0 0 16px;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.plan__price span {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.plan__list {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.plan__list li {
+  padding: 4px 0;
+  color: var(--color-muted);
+}
+
+/* ===== Footer ===== */
+.footer {
+  padding: 24px var(--page-pad);
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.footer p {
+  margin: 0 0 8px;
+}
+
+.footer a {
+  color: var(--color-accent-light);
+}
+
+/* ===== 9.1 Tablet: 768px and wider ===== */
+@media (min-width: 768px) {
+  :root {
+    --page-pad: 40px;
+    --section-space: 64px;
+  }
+
+  .hero__title {
+    font-size: 40px;
+  }
+}
+
+/* ===== 9.1 Laptop: 1024px and wider ===== */
+@media (min-width: 1024px) {
+  :root {
+    --page-pad: 64px;
+    --section-space: 88px;
+  }
+
+  .hero__title {
+    font-size: 48px;
+  }
+}

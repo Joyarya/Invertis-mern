@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Planly is a simple project manager for small teams">
+    <meta name="author" content="Jwaydeep Sagar">
+    <title>Planly | Plan projects without the chaos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar__inner container">
+            <a class="navbar__logo" href="#top">Planly<span>.</span></a>
+
+            <nav class="navbar__nav" aria-label="Main">
+                <ul class="navbar__links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <a class="button" href="#pricing">Get started</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="top">
+            <div class="hero__inner container">
+                <div class="hero__text">
+                    <h1 class="hero__title">Plan projects without the chaos</h1>
+                    <p class="hero__lead">Planly keeps your tasks, deadlines and teammates in one simple place, so nothing slips through the cracks.</p>
+                    <a class="button button--light" href="#pricing">Start free</a>
+                </div>
+                <img class="hero__image" src="banner.jpg" alt="Team planning a project together">
+            </div>
+        </section>
+
+        <section class="section" id="features">
+            <div class="container">
+                <h2 class="section__title">Everything in one place</h2>
+                <div class="features">
+                    <article class="feature">
+                        <h3 class="feature__title">Plan in minutes</h3>
+                        <p class="feature__text">Create a project, add tasks and set due dates in a few clicks.</p>
+                    </article>
+                    <article class="feature">
+                        <h3 class="feature__title">Work together</h3>
+                        <p class="feature__text">Assign tasks to teammates and see who is working on what.</p>
+                    </article>
+                    <article class="feature">
+                        <h3 class="feature__title">Track progress</h3>
+                        <p class="feature__text">A simple dashboard shows what is done, what is due and what is late.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="pricing">
+            <div class="container">
+                <h2 class="section__title">Simple pricing</h2>
+                <div class="pricing">
+                    <article class="plan">
+                        <h3 class="plan__name">Starter</h3>
+                        <p class="plan__price">&#8377;0 <span>/ month</span></p>
+                        <ul class="plan__list">
+                            <li>Up to 3 projects</li>
+                            <li>5 team members</li>
+                            <li>Basic dashboard</li>
+                        </ul>
+                        <a class="button" href="#contact">Choose Starter</a>
+                    </article>
+
+                    <article class="plan plan--featured">
+                        <h3 class="plan__name">Team</h3>
+                        <p class="plan__price">&#8377;499 <span>/ month</span></p>
+                        <ul class="plan__list">
+                            <li>Unlimited projects</li>
+                            <li>25 team members</li>
+                            <li>Task assignment</li>
+                        </ul>
+                        <a class="button" href="#contact">Choose Team</a>
+                    </article>
+
+                    <article class="plan">
+                        <h3 class="plan__name">Business</h3>
+                        <p class="plan__price">&#8377;1,499 <span>/ month</span></p>
+                        <ul class="plan__list">
+                            <li>Unlimited everything</li>
+                            <li>Detailed reports</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <a class="button" href="#contact">Choose Business</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="footer__inner container">
+            <p>&copy; 2026 Planly</p>
+            <a href="mailto:hello@planly.example">hello@planly.example</a>
+        </div>
+    </footer>
+</body>
+</html>
