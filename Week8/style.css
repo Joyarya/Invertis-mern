@@ -1,3 +1,4 @@
+/* ===== Design tokens: change colours and sizes here only ===== */
 :root {
   --color-bg: #F4F1EA;
   --color-surface: #FBF9F4;
@@ -29,21 +30,24 @@ body {
   color: var(--color-text);
 }
 
-
+/* ===== 8.3 Page layout (named grid areas) ===== */
 .dashboard {
-  display: grid;                                        
-  grid-template-columns: var(--sidebar-width) 1fr;      
-  grid-template-rows: auto 1fr auto;                    
-  gap: var(--gap);                                      
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "head head"
+    "side main"
+    "foot foot";
+  gap: var(--gap);
   min-height: 100vh;
   padding: var(--gap);
 }
 
-
-.topbar,
-.footer {
-  grid-column: 1 / -1;
-}
+.topbar  { grid-area: head; }
+.sidebar { grid-area: side; }
+.main    { grid-area: main; }
+.footer  { grid-area: foot; }
 
 /* ===== Top bar ===== */
 .topbar {
@@ -137,10 +141,10 @@ body {
   color: var(--color-muted);
 }
 
-/* Small boxes: a second grid INSIDE the main area, 4 equal columns */
+/* 8.2 Small boxes: grid that re-arranges itself */
 .stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));   /* as many columns as fit */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: var(--gap);
 }
 
