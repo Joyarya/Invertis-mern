@@ -30,7 +30,7 @@ body {
   color: var(--color-text);
 }
 
-/* ===== 8.3 Page layout (named grid areas) ===== */
+/* ===== Page layout (named grid areas) ===== */
 .dashboard {
   display: grid;
   grid-template-columns: var(--sidebar-width) 1fr;
@@ -141,23 +141,49 @@ body {
   color: var(--color-muted);
 }
 
-/* 8.2 Small boxes: grid that re-arranges itself */
+/* Small boxes: grid that re-arranges itself */
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: var(--gap);
 }
 
+/* Each box: flexbox inside the grid cell */
 .stat {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   padding: 20px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   background-color: var(--color-surface);
 }
 
+.stat__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.stat__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.stat__info {
+  min-width: 0;
+}
+
 .stat__label {
   margin: 0;
   font-size: 0.9rem;
+  line-height: 1.4;
   color: var(--color-muted);
 }
 
@@ -187,30 +213,37 @@ body {
 .footer p {
   margin: 0;
 }
-/* ===== 8.4 Flexbox inside each grid box ===== */
-.stat {
-  display: flex;                 /* icon and text in a row */
-  align-items: center;           /* vertically centred */
-  gap: 14px;
+
+/* ===== Small screens: redraw the layout, no HTML changes ===== */
+@media (max-width: 800px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "head"
+      "side"
+      "main"
+      "foot";
+  }
+
+  .sidebar__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
-.stat__icon {
-  display: flex;                 /* flex again, to centre the svg inside the circle */
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;                /* the circle never gets squashed */
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: var(--color-accent-soft);
-  color: var(--color-accent);    /* the svg uses currentColor, so it picks this up */
-}
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 12px;
+    gap: 12px;
+  }
 
-.stat__icon svg {
-  width: 22px;
-  height: 22px;
-}
+  .topbar {
+    padding: 12px 16px;
+  }
 
-.stat__info {
-  min-width: 0;                  /* lets long text wrap instead of overflowing */
+  .stat {
+    padding: 16px;
+    gap: 12px;
+  }
 }
