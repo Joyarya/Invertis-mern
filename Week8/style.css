@@ -140,7 +140,7 @@ body {
 /* Small boxes: a second grid INSIDE the main area, 4 equal columns */
 .stats {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;    /* four equal shares of the width */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));   /* as many columns as fit */
   gap: var(--gap);
 }
 
